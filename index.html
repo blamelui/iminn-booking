@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I'M INN Hotel — Sorsogon City</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-im">I'M</span>
+        <span class="logo-inn">INN</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="booking.html" class="btn-book-nav">Book Now</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img src="images/iminn-hero.jpg" alt="I'M INN Hotel Sorsogon" class="hero-img" />
+    <div class="hero-content">
+      <p class="hero-tag">SORSOGON CITY · PHILIPPINES</p>
+      <h1>A Place Like Home</h1>
+      <p class="hero-sub">Affordable comfort right in front of SM Sorsogon City.</p>
+      <div class="hero-buttons">
+        <a href="booking.html" class="btn-primary">Book a Room</a>
+        <a href="#rooms" class="btn-ghost">View Rooms</a>
+      </div>
+    </div>
+    <div class="hero-scroll">↓ Scroll to explore</div>
+  </section>
+
+  <!-- ============ QUICK INFO STRIP ============ -->
+  <section class="info-strip">
+    <div class="info-item">
+      <span class="info-icon">📍</span>
+      <div>
+        <h4>Location</h4>
+        <p>Purok 6, Balogo, Sorsogon City</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">📞</span>
+      <div>
+        <h4>Call Us</h4>
+        <p>0908 695 6732</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">🕒</span>
+      <div>
+        <h4>Check-in / Check-out</h4>
+        <p>2:00 PM / 12:00 NN</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">🛍️</span>
+      <div>
+        <h4>Nearby</h4>
+        <p>In front of SM Sorsogon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <p class="section-tag">ABOUT US</p>
+        <h2>Your home away from home in Sorsogon</h2>
+        <p>
+          I'M INN Hotel is a cozy, budget-friendly inn located along the National Highway
+          in Balogo, Sorsogon City — right in front of SM Sorsogon. Whether you're here
+          for business, a quick stopover, or a weekend escape, we offer clean, comfortable
+          rooms at prices that won't break the bank.
+        </p>
+        <p>
+          From solo travelers to families and barkadas, we have a room for you.
+        </p>
+        <a href="booking.html" class="btn-primary">Reserve Your Stay</a>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <h3>6+</h3>
+          <p>Room Types</p>
+        </div>
+        <div class="stat">
+          <h3>₱1,000</h3>
+          <p>Starting Rate</p>
+        </div>
+        <div class="stat">
+          <h3>24/7</h3>
+          <p>Front Desk</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Cozy Vibes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- ============ ROOMS ============ -->
+  <section class="rooms" id="rooms">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">OUR ROOMS</p>
+        <h2>Pick the room that fits you</h2>
+        <p class="section-desc">All rates are per night. Check-in 2PM, check-out 12NN.</p>
+      </div>
+
+      <div class="room-grid">
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-solo.jpg" alt="Solo Room" style="width:100%;height:200px;object-fit:cover;display:block;">
+          </div>
+          <div class="room-body">
+            <h3>Solo Room</h3>
+            <p>A snug room for the solo traveler.</p>
+            <div class="room-price">₱1,000 <span>/ night</span></div>
+            <a href="booking.html?room=Solo%20Room" class="btn-room">Book This</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-standard.jpg" alt="Standard Double" style="width:100%;height:200px;object-fit:cover;display:block;">
+          </div>
+          <div class="room-body">
+            <h3>Standard Double</h3>
+            <p>Perfect for couples or two friends.</p>
+            <div class="room-price">₱1,500 <span>/ night</span></div>
+            <a href="booking.html?room=Standard%20Double" class="btn-room">Book This</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-deluxe-twin.jpg" alt="Deluxe Twin / Double" style="width:100%;height:200px;object-fit:cover;display:block;">
+          </div>
+          <div class="room-body">
+            <h3>Deluxe Twin / Double</h3>
+            <p>Extra space and upgraded comfort.</p>
+            <div class="room-price">₱1,800 <span>/ night</span></div>
+            <a href="booking.html?room=Deluxe%20Twin%2FDouble" class="btn-room">Book This</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-deluxe-trio.jpg" alt="Deluxe Trio" style="width:100%;height:200px;object-fit:cover;display:block;">
+          </div>
+          <div class="room-body">
+            <h3>Deluxe Trio</h3>
+            <p>Room for three — great for small groups.</p>
+            <div class="room-price">₱2,400 <span>/ night</span></div>
+            <a href="booking.html?room=Deluxe%20Trio" class="btn-room">Book This</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-img">
+            <img src="images/room-quads.jpg" alt="Quads" style="width:100%;height:200px;object-fit:cover;display:block;">
+          </div>
+          <div class="room-body">
+            <h3>Quads</h3>
+            <p>Spacious room for four guests.</p>
+            <div class="room-price">₱3,100 <span>/ night</span></div>
+            <a href="booking.html?room=Quads" class="btn-room">Book This</a>
+          </div>
+        </div>
+
+        <div class="room-card room-featured">
+          <div class="room-img">
+            <img src="images/room-penthouse.jpg" alt="Penthouse" style="width:100%;height:200px;object-fit:cover;display:block;">
+          </div>
+          <div class="room-body">
+            <span class="badge">PREMIUM</span>
+            <h3>Penthouse</h3>
+            <p>Our top-floor suite with the best view.</p>
+            <div class="room-price">₱10,000 <span>/ night</span></div>
+            <a href="booking.html?room=Penthouse" class="btn-room">Book This</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="rooms-note">
+        Add-ons: Extra bed ₱500 &nbsp;|&nbsp; Extra hour ₱150 &nbsp;|&nbsp;
+        50% down payment required. Non-refundable if canceled within 3 days.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ WEATHER TEASER ============ -->
+  <section class="weather-teaser">
+    <div class="container weather-teaser-inner">
+      <div>
+        <p class="section-tag light">TRAVEL TIP</p>
+        <h2>Check Sorsogon's weather before you pack</h2>
+        <p>See live weather for Sorsogon City on our booking page.</p>
+      </div>
+      <a href="booking.html" class="btn-primary">Check Weather</a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <p class="section-tag">CONTACT</p>
+        <h2>Find us</h2>
+        <ul class="contact-list">
+          <li><strong>Address:</strong> Purok 6, National Highway, Balogo, Sorsogon City, Sorsogon 4700</li>
+          <li><strong>Phone:</strong> 0908 695 6732</li>
+          <li><strong>Email:</strong> iminn.sorsogon@gmail.com</li>
+          <li><strong>Facebook:</strong> <a href="https://www.facebook.com/Iminnsorsogon2021" target="_blank" rel="noopener">I'M INN Sorsogon</a></li>
+        </ul>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps?q=I'M+INN+Hotel+Balogo+Sorsogon+City&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo logo-footer">
+          <span class="logo-im">I'M</span>
+          <span class="logo-inn">INN</span>
+        </div>
+        <p class="footer-tag">A place like home. Affordable. Right in front of SM Sorsogon.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="#rooms">Rooms</a>
+        <a href="booking.html">Book Now</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>0908 695 6732</p>
+        <p>iminn.sorsogon@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 I'M INN Hotel Sorsogon. Midterm Project Demo.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

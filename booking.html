@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Stay — I'M INN Hotel Sorsogon</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar navbar-solid" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-im">I'M</span>
+        <span class="logo-inn">INN</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#rooms">Rooms</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="booking.html" class="btn-book-nav active">Book Now</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ PAGE HEADER ============ -->
+  <section class="page-header">
+    <div class="container">
+      <p class="section-tag light">RESERVATION</p>
+      <h1>Book Your Stay</h1>
+      <p>Fill out the form below. A confirmation with your booking details will be sent to your email.</p>
+    </div>
+  </section>
+
+  <!-- ============ BOOKING SECTION ============ -->
+  <section class="booking-section">
+    <div class="container booking-grid">
+
+      <!-- LEFT: FORM -->
+      <div class="booking-form-wrap">
+        <h2>Booking Details</h2>
+        <p class="form-sub">All fields marked with <span class="req">*</span> are required.</p>
+
+        <form id="bookingForm" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="req">*</span></label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Juan Dela Cruz" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="req">*</span></label>
+              <input type="email" id="email" name="email" required placeholder="juan@email.com" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" required placeholder="0917 123 4567" />
+            </div>
+            <div class="form-group">
+              <label for="guests">Number of Guests <span class="req">*</span></label>
+              <input type="number" id="guests" name="guests" min="1" max="10" value="2" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkin">Check-in Date <span class="req">*</span></label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+            <div class="form-group">
+              <label for="checkout">Check-out Date <span class="req">*</span></label>
+              <input type="date" id="checkout" name="checkout" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="roomType">Room Type <span class="req">*</span></label>
+            <select id="roomType" name="roomType" required>
+              <option value="">Select a room</option>
+              <option value="Solo Room" data-price="1000">Solo Room — ₱1,000 / night</option>
+              <option value="Standard Double" data-price="1500">Standard Double — ₱1,500 / night</option>
+              <option value="Deluxe Twin/Double" data-price="1800">Deluxe Twin/Double — ₱1,800 / night</option>
+              <option value="Deluxe Trio" data-price="2400">Deluxe Trio — ₱2,400 / night</option>
+              <option value="Quads" data-price="3100">Quads — ₱3,100 / night</option>
+              <option value="Penthouse" data-price="10000">Penthouse — ₱10,000 / night</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="extraBed">Extra Bed</label>
+              <select id="extraBed" name="extraBed">
+                <option value="0" data-price="0">None</option>
+                <option value="1" data-price="500">1 Extra Bed — ₱500</option>
+                <option value="2" data-price="1000">2 Extra Beds — ₱1,000</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="extraHour">Extra Hour</label>
+              <select id="extraHour" name="extraHour">
+                <option value="0" data-price="0">None</option>
+                <option value="1" data-price="150">1 Extra Hour — ₱150</option>
+                <option value="2" data-price="300">2 Extra Hours — ₱300</option>
+                <option value="3" data-price="450">3 Extra Hours — ₱450</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="requests">Special Requests (optional)</label>
+            <textarea id="requests" name="requests" rows="3" placeholder="e.g. Late check-in, high floor, etc."></textarea>
+          </div>
+
+          <!-- Live total preview -->
+          <div class="total-preview" id="totalPreview">
+            <div class="total-row">
+              <span>Nights</span>
+              <span id="nightsDisplay">—</span>
+            </div>
+            <div class="total-row">
+              <span>Room subtotal</span>
+              <span id="roomSubtotal">₱0</span>
+            </div>
+            <div class="total-row">
+              <span>Add-ons</span>
+              <span id="addonsTotal">₱0</span>
+            </div>
+            <div class="total-row total-final">
+              <span>Estimated Total</span>
+              <span id="grandTotal">₱0</span>
+            </div>
+            <p class="total-note">50% down payment required upon confirmation.</p>
+          </div>
+
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text">Confirm Booking</span>
+            <span class="btn-loading" style="display:none;">Sending your booking…</span>
+          </button>
+
+          <p class="form-message" id="formMessage"></p>
+        </form>
+      </div>
+
+      <!-- RIGHT: WEATHER + SUMMARY -->
+      <aside class="booking-side">
+
+        <!-- WEATHER WIDGET -->
+        <div class="weather-widget">
+          <p class="widget-tag">LIVE WEATHER</p>
+          <h3>Sorsogon City</h3>
+          <div class="weather-main" id="weatherMain">
+            <div class="weather-loading">Loading weather…</div>
+          </div>
+          <p class="weather-note">Know what to pack before you travel.</p>
+        </div>
+
+        <!-- HOTEL INFO -->
+        <div class="side-info">
+          <h3>I'M INN Hotel</h3>
+          <ul>
+            <li>📍 Purok 6, Balogo, Sorsogon City</li>
+            <li>📞 0908 695 6732</li>
+            <li>✉️ iminn.sorsogon@gmail.com</li>
+            <li>🕒 Check-in 2:00 PM · Check-out 12:00 NN</li>
+          </ul>
+          <p class="side-note">
+            In front of SM Sorsogon. A place like home — affordable and cozy.
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="logo logo-footer">
+          <span class="logo-im">I'M</span>
+          <span class="logo-inn">INN</span>
+        </div>
+        <p class="footer-tag">A place like home. Affordable. Right in front of SM Sorsogon.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="index.html#rooms">Rooms</a>
+        <a href="booking.html">Book Now</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>0908 695 6732</p>
+        <p>iminn.sorsogon@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 I'M INN Hotel Sorsogon. Midterm Project Demo.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
